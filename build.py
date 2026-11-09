@@ -9,7 +9,7 @@ import pathlib
 
 ROOT = pathlib.Path(__file__).parent
 BASE = "https://milanbenicky.github.io/miben-web/"
-LANGS = ["en", "de", "fr", "es", "ru"]  # order of the switcher; English is the source and x-default
+LANGS = ["en"]  # order of the switcher; English is the source and x-default. Only English is published (de, fr, es, ru are in git history)
 PAGES = [("index", "index.html", "home"), ("privacy", "privacy.html", "privacy"), ("delete-account", "delete-account.html", "delete")]
 
 LAYOUT = """<!doctype html>
@@ -31,10 +31,7 @@ LAYOUT = """<!doctype html>
 {nav}
     </nav>
   </div>
-  <div class="wrap langs">
-{langs}
-  </div>
-</header>
+{langs_block}</header>
 <main class="wrap">
 {notice}{body}</main>
 <footer>
@@ -81,6 +78,10 @@ def main():
                 '<link rel="alternate" hreflang="{}" href="{}">'.format(
                     ui[t]["html_lang"], BASE + ("" if t == "en" else t + "/") + filename) for t in LANGS)
             alternates += '\n<link rel="alternate" hreflang="x-default" href="{}">'.format(BASE + filename)
+            # With a single language there is nothing to switch to and no alternates to announce.
+            langs_block = '  <div class="wrap langs">\n{}\n  </div>\n'.format(langs) if len(LANGS) > 1 else ""
+            if len(LANGS) == 1:
+                alternates = ""
             notice = ""
             if lang != "en":
                 notice = '  <p class="notice">{} <a href="{}" hreflang="en" lang="en">{}</a></p>\n'.format(
@@ -88,7 +89,7 @@ def main():
             html = LAYOUT.format(
                 html_lang=u["html_lang"], title=u["pages"][key]["title"], description=u["pages"][key]["description"],
                 canonical=BASE + ("" if lang == "en" else lang + "/") + filename, alternates=alternates,
-                up="" if lang == "en" else "../", nav=nav, langs=langs, notice=notice, body=body,
+                up="" if lang == "en" else "../", nav=nav, langs_block=langs_block, notice=notice, body=body,
                 address=u["footer"]["address"], ico=u["footer"]["ico"], dic=u["footer"]["dic"],
                 icdph=u["footer"]["icdph"], duns=u["footer"]["duns"])
             (d / filename).write_text(html, encoding="utf-8", newline="\n")
