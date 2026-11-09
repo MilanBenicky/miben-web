@@ -41,3 +41,7 @@ a { color: var(--accent); }
 .updated { color: var(--muted); font-size: 0.95rem; }
 footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.95rem; padding: 20px 0 32px; }
 footer p { margin: 0 0 6px; }
+.langs { padding-top: 0 !important; padding-bottom: 10px !important; font-size: 0.95rem; justify-content: flex-start !important; }
+.langs a { margin-right: 14px; color: var(--muted); text-decoration: none; }
+.langs a:hover, .langs a[aria-current] { color: var(--accent); font-weight: 600; }
+.notice { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 10px 14px; color: var(--muted); font-size: 0.95rem; }

@@ -1,0 +1,28 @@
+{
+  "name": "Español",
+  "html_lang": "es",
+  "nav": { "home": "Inicio", "privacy": "Política de privacidad", "delete": "Eliminar cuenta" },
+  "footer": {
+    "address": "MiBeN s. r. o., Kvačalova 1167/31, 010 04 Žilina, Eslovaquia",
+    "ico": "Número de identificación de la empresa (IČO)",
+    "dic": "Número de identificación fiscal (DIČ)",
+    "icdph": "Número de identificación a efectos del IVA (IČ DPH)",
+    "duns": "D-U-N-S®"
+  },
+  "notice": "Esta página es una traducción por comodidad. Si difiere de la versión en inglés, prevalece la versión en inglés.",
+  "english_link": "Versión en inglés",
+  "pages": {
+    "index": {
+      "title": "MiBeN",
+      "description": "MiBeN s. r. o. desarrolla MiBeN Shopping List, una aplicación de lista de la compra para Android."
+    },
+    "privacy": {
+      "title": "Política de privacidad – MiBeN Shopping List",
+      "description": "Política de privacidad de la aplicación MiBeN Shopping List: qué almacenamos, por qué, durante cuánto tiempo y cómo eliminarlo."
+    },
+    "delete-account": {
+      "title": "Eliminar su cuenta – MiBeN Shopping List",
+      "description": "Cómo eliminar su cuenta de MiBeN Shopping List y qué sucede con sus datos."
+    }
+  }
+}
