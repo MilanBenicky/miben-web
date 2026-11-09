@@ -43,7 +43,7 @@
   <ul>
     <li>stabilný identifikátor tvojho účtu Google (nie heslo),</li>
     <li>tvoju e-mailovú adresu, ak ju Google potvrdí,</li>
-    <li>tvoje zobrazované meno, ak ho Google poskytne.</li>
+    <li>tvoje meno, ktoré Google môže zahrnúť do prihlasovacieho tokenu; neukladáme ho.</li>
   </ul>
   <p>Pri synchronizácii sa na našom serveri ukladá a s tvojím účtom spája:</p>
   <ul>
@@ -52,7 +52,7 @@
     <li>obrázky, ktoré si pridal k vlastným produktom (aplikácia ich pred odoslaním zmenší),</li>
     <li>tvoje spojenia s priateľmi a zoznamy, ktoré zdieľaš.</li>
   </ul>
-  <p><strong>Zdieľanie:</strong> keď zdieľaš zoznam s priateľom, tento človek vidí zoznam, jeho položky, použité produkty a obrázky a tvoju e-mailovú adresu ako člena zoznamu. Nezdieľaj zoznam s ľuďmi, ktorí to nemajú vidieť.</p>
+  <p><strong>Zdieľanie:</strong> keď zdieľaš zoznam s priateľom, tento človek vidí zoznam, jeho položky, použité produkty a obrázky a tvoju e-mailovú adresu ako člena zoznamu. Nezdieľaj zoznam s ľuďmi, ktorí to nemajú vidieť. Priatelia, s ktorými sa spojíš cez kód priateľa, tiež vidia tvoju e-mailovú adresu. Priateľ ti môže dať prezývku, ktorú vidí len on.</p>
   <p>Tvoje prihlásenie v zariadení sa uchováva ako šifrovaný token v tomto zariadení a vyprší, ak sa 90 dní nepoužije.</p>
 
   <h2>5. Prečo údaje používame a na akom právnom základe</h2>
@@ -61,16 +61,18 @@
     <li><strong>Na zabezpečenie a stabilitu služby</strong>, predchádzanie zneužitiu a opravu chýb pomocou technických záznamov z časti 6: náš oprávnený záujem (čl. 6 ods. 1 písm. f GDPR).</li>
     <li><strong>Na splnenie zákonných povinností</strong>, napríklad v účtovníctve, ak sa ponúknu platené funkcie: čl. 6 ods. 1 písm. c GDPR.</li>
   </ul>
+  <p>Poskytnutie údajov je potrebné, len ak používaš synchronizáciu a zdieľanie. Aplikácia funguje aj bez nich.</p>
 
   <h2>6. Technické záznamy</h2>
-  <p>Náš server sa monitoruje službou Microsoft Azure Monitor (Application Insights). Zaznamenáva technické informácie o požiadavkách na server, napríklad čas, požadovanú adresu, stav odpovede, chyby a IP adresu. Používame ich len na prevádzku, zabezpečenie a odstraňovanie porúch služby. Obsah tvojich zoznamov sa do týchto záznamov zapisovať nemá. Záznamy sa uchovávajú len obmedzený čas.</p>
+  <p>Náš server sa monitoruje službou Microsoft Azure Monitor (Application Insights). Zaznamenáva technické informácie o požiadavkách na server, napríklad čas, požadovanú adresu, stav odpovede, chyby a podľa konfigurácie aj IP adresu požiadavky. Používame ich len na prevádzku, zabezpečenie a odstraňovanie porúch služby. Obsah tvojich zoznamov sa do týchto záznamov zapisovať nemá. Záznamy sa uchovávajú len obmedzený čas.</p>
 
   <h2>7. Kto údaje dostáva</h2>
   <ul>
     <li><strong>Microsoft Azure</strong> hostuje náš server, databázu a úložisko obrázkov. Je naším sprostredkovateľom. Všetko je uložené v regióne Microsoft Azure Poland Central (Varšava, Poľsko) v Európskej únii.</li>
-    <li><strong>Google</strong> poskytuje prihlásenie cez Google a Google Play vybavuje platby, ak si kúpiš predplatné. Údaje o tvojej karte nikdy nevidíme.</li>
+    <li><strong>Google</strong> poskytuje prihlásenie cez Google a Google Play vybavuje platby, ak si kúpiš predplatné. Google pri týchto službách koná ako samostatný prevádzkovateľ podľa vlastných zásad ochrany súkromia. Údaje o tvojej karte nikdy nevidíme.</li>
     <li><strong>Ďalší používatelia</strong>, s ktorými zdieľaš zoznam, ako je popísané v časti 4.</li>
   </ul>
+  <p>Microsoft a Google sú americké firmy a môžu údaje spracúvať aj v USA. Takéto prenosy sa opierajú o Rámec ochrany údajov medzi EÚ a USA alebo o štandardné zmluvné doložky Európskej komisie.</p>
   <p>Nepoužívame reklamné siete a údaje nikomu inému neodovzdávame, okrem prípadov, keď to vyžaduje zákon.</p>
 
   <h2>8. Ako dlho údaje uchovávame</h2>
@@ -79,6 +81,7 @@
     <li>Keď účet zmažeš, tvoje údaje sa zo servera odstránia, ako je popísané v časti <a href="zmazanie-uctu.html">Zmazanie účtu</a>.</li>
     <li>Ak sa ponúknu platené funkcie a predplatné skončí, synchronizované údaje sa zmažú 365 dní po jeho skončení.</li>
     <li>Obrázky, ktoré už nepoužíva žiadny produkt, sa mažú automaticky.</li>
+    <li>Zálohy databázy, ktoré uchováva poskytovateľ hostingu, po krátkom čase automaticky vypršia.</li>
   </ul>
 
   <h2>9. Tvoje práva</h2>
