@@ -33,7 +33,7 @@
   <ul>
     <li>The app works without an account. Without an account, your lists, products and images stay on your phone and we do not receive them.</li>
     <li>If you choose to sign in with Google, your data is stored on our server so that it can be synced between your devices and shared with people you choose.</li>
-    <li>The app has no advertising and no third-party analytics or tracking.</li>
+    <li>The app has no advertising and no usage analytics or tracking. It only sends technical crash reports (section 6).</li>
     <li>We do not sell your data.</li>
     <li>You can delete your account and its data in the app at any time.</li>
   </ul>
@@ -70,10 +70,13 @@
   <h2>6. Technical logs</h2>
   <p>Our server is monitored with Microsoft Azure Monitor (Application Insights). It records technical information about requests to the server, such as time, requested address, response status, errors and the IP address of the request, from which Azure derives an approximate location (country, region and city). We use it only to run, secure and troubleshoot the service. The content of your lists is not intended to be written to these logs. The logs are kept for up to 90 days and then deleted automatically.</p>
 
+  <p>When the app crashes or a sync error happens, it also sends a technical report to Google Firebase Crashlytics so that we can find and fix the error. The report contains the error and the code path where it happened, the app version, the Android version, the phone model, the state of the phone at the time (for example free memory) and a random installation identifier. It does not contain your name, e-mail address, the names of your products or lists, or pictures. Google also receives the IP address of the request. We use the reports only to fix errors (our legitimate interest, Art. 6(1)(f) GDPR). Crashlytics keeps them for up to 90 days.</p>
+
   <h2>7. Who receives the data</h2>
   <ul>
     <li><strong>Microsoft Azure</strong> hosts our server, database and image storage. It acts as our processor. Everything is stored in the Microsoft Azure region Poland Central (Warsaw, Poland), in the European Union.</li>
     <li><strong>Google</strong> provides sign-in with Google, and Google Play handles payments if you buy a subscription. Google acts as an independent controller for these services under its own privacy policy. We never see your card details.</li>
+    <li><strong>Google Firebase Crashlytics</strong> receives the technical crash reports described in section 6. Google acts as our processor for them.</li>
     <li><strong>Other users</strong> you share a list with, as described in section 4.</li>
   </ul>
   <p>Microsoft and Google are US companies and may process data in the USA. Such transfers rely on the EU-US Data Privacy Framework or on the Standard Contractual Clauses of the European Commission.</p>
