@@ -2,7 +2,7 @@
 """Generates the static site from _src/<lang>/ (ui.json plus one HTML fragment per page).
 
 English is written to the site root, every other language to <lang>/. Run: python build.py
-Pages: index.html, privacy.html, delete-account.html, open-data.html in every language.
+Pages: index.html, privacy.html, delete-account.html, terms.html, open-data.html in every language.
 """
 import json
 import pathlib
@@ -10,7 +10,7 @@ import pathlib
 ROOT = pathlib.Path(__file__).parent
 BASE = "https://milanbenicky.github.io/miben-web/"
 LANGS = ["en"]  # order of the switcher; English is the source and x-default. Only English is published (de, fr, es, ru are in git history)
-PAGES = [("index", "index.html", "home"), ("privacy", "privacy.html", "privacy"), ("delete-account", "delete-account.html", "delete"), ("open-data", "open-data.html", "opendata")]
+PAGES = [("index", "index.html", "home"), ("privacy", "privacy.html", "privacy"), ("delete-account", "delete-account.html", "delete"), ("terms", "terms.html", "terms"), ("open-data", "open-data.html", "opendata")]
 
 LAYOUT = """<!doctype html>
 <html lang="{html_lang}">
